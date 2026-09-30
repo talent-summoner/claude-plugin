@@ -12,8 +12,8 @@ Talent Summoner is an AI recruiting product that sources candidates for a role. 
 | Tool | What it does | Changes data? |
 | --- | --- | --- |
 | `sourcing_read` | Read a session, or list your sessions | No |
-| `sourcing_start` | Start a new sourcing session from a role brief | Creates a session |
-| `sourcing_continue` | Send a message: edit or approve the ICP, search, find more, refine, draft outreach | Yes |
+| `sourcing_start` | Start a new sourcing session from a role brief | Creates a session; a search can use a Role |
+| `sourcing_continue` | Send a message: edit or approve the ICP, search, find more, refine, draft outreach | Yes; a search can use a Role |
 | `sourcing_review` | Mark a candidate liked, shortlisted or skipped | Yes |
 | `sourcing_contact` | Look up a candidate's work email | Yes |
 | `sourcing_stop` | Stop the running search; finished work stays saved | Yes |
@@ -28,7 +28,7 @@ Talent Summoner is an AI recruiting product that sources candidates for a role. 
 
 ## Costs and consent
 
-Searching and evaluating candidates uses your Talent Summoner plan: a free preview, a paid Role, or a subscription. Claude spends a paid Role only after you agree. Prices are shown on [talentsummoner.com/pricing](https://talentsummoner.com/pricing). Outreach is only drafted from Claude; you review and send messages in the Talent Summoner app.
+Searching and evaluating candidates uses your Talent Summoner plan: a free preview, a paid Role, or a subscription. When a search evaluates new candidates, Talent Summoner applies an unused Role you already hold to that session. The tools that can use a Role are marked as making changes, so Claude asks for your approval before running them unless you have chosen to always allow them. The skill also tells Claude to call `sourcing_unlock_role` only after you agree to spend a Role. Prices are shown on [talentsummoner.com/pricing](https://talentsummoner.com/pricing). Outreach is only drafted from Claude; you review and send messages in the Talent Summoner app.
 
 ## Data and privacy
 
