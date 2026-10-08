@@ -2,6 +2,17 @@
 
 Talent Summoner is an AI recruiting product that sources candidates for a role. This plugin connects Claude to your Talent Summoner account so you can run the whole sourcing workflow from a conversation: describe a role, review the ideal candidate profile (ICP) it drafts, search for candidates, shortlist the ones you like, and look up their work emails.
 
+## Install
+
+In Claude Code:
+
+```
+/plugin marketplace add talent-summoner/claude-plugin
+/plugin install talent-summoner@talent-summoner
+```
+
+Claude asks you to sign in to Talent Summoner the first time it uses a tool. For other AI agents (ChatGPT, Cursor, VS Code and more), see [talentsummoner.com/mcp](https://talentsummoner.com/mcp).
+
 ## What's included
 
 - **MCP server**: the Talent Summoner remote server at `https://talentsummoner.com/api/mcp`. You sign in with your Talent Summoner account the first time Claude uses it.

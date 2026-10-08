@@ -1,0 +1,14 @@
+{
+  "name": "talent-summoner",
+  "owner": {
+    "name": "Talent Summoner",
+    "url": "https://talentsummoner.com"
+  },
+  "plugins": [
+    {
+      "name": "talent-summoner",
+      "source": "./",
+      "description": "Source, review and contact hiring candidates with Talent Summoner from Claude."
+    }
+  ]
+}
