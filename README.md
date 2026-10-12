@@ -11,12 +11,14 @@ In Claude Code:
 /plugin install talent-summoner@talent-summoner
 ```
 
-Claude asks you to sign in to Talent Summoner the first time it uses a tool. For other AI agents (ChatGPT, Cursor, VS Code and more), see [talentsummoner.com/mcp](https://talentsummoner.com/mcp).
+Claude asks you to sign in to Talent Summoner the first time it uses a tool.
+
+In Cursor, install Talent Summoner from the Cursor Marketplace, then sign in when asked. For other AI agents (ChatGPT, Cursor, VS Code and more), see [talentsummoner.com/mcp](https://talentsummoner.com/mcp).
 
 ## What's included
 
 - **MCP server**: the Talent Summoner remote server at `https://talentsummoner.com/api/mcp`. You sign in with your Talent Summoner account the first time Claude uses it.
-- **Skill** (`talent-summoner`): teaches Claude the sourcing workflow, how to wait for long-running searches, and when it must ask you before spending a paid Role.
+- **Skill** (`talent-summoner`): teaches Claude the sourcing workflow, how to wait for long-running searches, and when it must ask you before using a Role.
 
 ## Tools
 
@@ -28,7 +30,7 @@ Claude asks you to sign in to Talent Summoner the first time it uses a tool. For
 | `sourcing_review` | Mark a candidate liked, shortlisted or skipped | Yes |
 | `sourcing_contact` | Look up a candidate's work email | Yes |
 | `sourcing_stop` | Stop the running search; finished work stays saved | Yes |
-| `sourcing_unlock_role` | Spend one paid Role on a session | Yes, uses a paid Role |
+| `sourcing_unlock_role` | Use one Role you already hold on a session | Yes, uses a Role |
 
 ## Example prompts
 
@@ -37,9 +39,9 @@ Claude asks you to sign in to Talent Summoner the first time it uses a tool. For
 - "Shortlist the top three and find their work emails."
 - "Show my Talent Summoner sourcing sessions."
 
-## Costs and consent
+## Consent
 
-Searching and evaluating candidates uses your Talent Summoner plan: a free preview, a paid Role, or a subscription. When a search evaluates new candidates, Talent Summoner applies an unused Role you already hold to that session. The tools that can use a Role are marked as making changes, so Claude asks for your approval before running them unless you have chosen to always allow them. The skill also tells Claude to call `sourcing_unlock_role` only after you agree to spend a Role. Prices are shown on [talentsummoner.com/pricing](https://talentsummoner.com/pricing). Outreach is only drafted from Claude; you review and send messages in the Talent Summoner app.
+Some actions use a Role from your Talent Summoner account. The tools that can use a Role are marked as making changes, so Claude asks for your approval before it runs them, unless you chose to always allow them. The skill tells Claude to call `sourcing_unlock_role` only after you agree. Outreach is only drafted in Claude. You review and send messages in the Talent Summoner app.
 
 ## Data and privacy
 
@@ -51,7 +53,7 @@ This plugin sends your requests (role briefs, messages, review decisions) to Tal
 
 ## Support
 
-Visit https://talentsummoner.com or contact the Talent Summoner team from the app.
+Email recruit@talentsummoner.com or visit https://talentsummoner.com/mcp.
 
 ## License
 
